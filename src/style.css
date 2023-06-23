@@ -1,0 +1,15 @@
+body {
+  margin: 0px;
+}
+
+header {
+  padding: 24px;
+  background-color: rgb(64, 112, 92);
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  margin: 0px;
+  padding-bottom: 12px;
+}
