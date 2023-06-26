@@ -1,5 +1,3 @@
-// const searchForm = document.getElementById('search-form');
-
 const getCityInput = () => {
   const cityInput = document.getElementById('city-input').value;
   return cityInput;
@@ -17,7 +15,6 @@ const getCurrentWeatherAPIData = async () => {
 };
 
 const getWeather = async () => {
-  // e.preventDefault();
   try {
     const weatherData = await getCurrentWeatherAPIData();
     const weather = {
@@ -25,13 +22,16 @@ const getWeather = async () => {
       tempC: weatherData.current.temp_c,
       tempF: weatherData.current.temp_f,
       condition: weatherData.current.condition.text,
+      feelslikeC: weatherData.current.feelslike_c,
+      feelslikeF: weatherData.current.feelslike_f,
+      wind: weatherData.current.wind_mph,
+      humidity: weatherData.current.humidity,
+      precip: weatherData.current.precip_in,
     };
     return weather;
   } catch (error) {
     console.log(`error: ${error}`);
   }
 };
-
-// searchForm.addEventListener('submit', getWeather);
 
 export { getWeather };
