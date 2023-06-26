@@ -1,4 +1,4 @@
-const searchForm = document.getElementById('search-form');
+// const searchForm = document.getElementById('search-form');
 
 const getCityInput = () => {
   const cityInput = document.getElementById('city-input').value;
@@ -16,8 +16,8 @@ const getCurrentWeatherAPIData = async () => {
   }
 };
 
-const getWeather = async (e) => {
-  e.preventDefault();
+const getWeather = async () => {
+  // e.preventDefault();
   try {
     const weatherData = await getCurrentWeatherAPIData();
     const weather = {
@@ -26,13 +26,12 @@ const getWeather = async (e) => {
       tempF: weatherData.current.temp_f,
       condition: weatherData.current.condition.text,
     };
-    console.log(weather);
     return weather;
   } catch (error) {
     console.log(`error: ${error}`);
   }
 };
 
-searchForm.addEventListener('submit', getWeather);
+// searchForm.addEventListener('submit', getWeather);
 
 export { getWeather };
