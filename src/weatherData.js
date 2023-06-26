@@ -22,6 +22,7 @@ const getWeather = async () => {
       tempC: weatherData.current.temp_c,
       tempF: weatherData.current.temp_f,
       condition: weatherData.current.condition.text,
+      icon: weatherData.current.condition.icon,
       feelslikeC: weatherData.current.feelslike_c,
       feelslikeF: weatherData.current.feelslike_f,
       wind: weatherData.current.wind_mph,
