@@ -20,7 +20,9 @@ const showCurrentWeatherDetail = (weather) => {
       <span>Feels like: ${weather.feelslikeF}</span><br>
       <span>Precipitation: ${weather.precip}"</span><br>
       <span>Humidity: ${weather.humidity}%</span><br>
-      <span>Wind: ${weather.wind}mph</span>
+      <span>Wind: ${weather.wind}mph</span><br>
+      <span>Sunrise: ${weather.sunrise}</span><br>
+      <span>Sunset: ${weather.sunset}</span>
     </div>
   `;
 };
