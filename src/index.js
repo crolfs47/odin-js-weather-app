@@ -1,6 +1,6 @@
 import './style.css';
 import { getWeather } from './weatherData';
-import { showCurrentWeatherMain, showCurrentWeatherDetail } from './display';
+import { showCurrentWeatherMain, showCurrentWeatherDetail, showForecast } from './display';
 
 const searchForm = document.getElementById('search-form');
 
@@ -9,4 +9,5 @@ searchForm.addEventListener('submit', async (e) => {
   const weather = await getWeather();
   showCurrentWeatherMain(weather);
   showCurrentWeatherDetail(weather);
+  showForecast(weather);
 });

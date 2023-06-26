@@ -6,7 +6,7 @@ const getCityInput = () => {
 const getCurrentWeatherAPIData = async () => {
   try {
     const city = getCityInput();
-    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=5cad8c98b3024bbaaf0190940232106&q=${city}&days=5`, { mode: 'cors' });
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=5cad8c98b3024bbaaf0190940232106&q=${city}&days=6`, { mode: 'cors' });
     const weatherData = await response.json();
     return weatherData;
   } catch (error) {
@@ -29,9 +29,8 @@ const getWeather = async () => {
       precip: weatherData.current.precip_in,
       sunrise: weatherData.forecast.forecastday[0].astro.sunrise,
       sunset: weatherData.forecast.forecastday[0].astro.sunset,
-      forecast: weatherData.forecast.forecastday[1],
+      forecast: weatherData.forecast,
     };
-    console.log(weather.forecast);
     return weather;
   } catch (error) {
     console.log(`error: ${error}`);
