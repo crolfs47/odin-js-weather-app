@@ -8,8 +8,8 @@ const showCurrentWeatherMain = (weather) => {
   <div id="temp">${weather.tempF}°</div>
   <div id="condition">${weather.condition}</div>
   <div id="high-low">
-    <span>H:100°</span>
-    <span>L:30°</span>
+    <span>H: ${weather.maxTempF}°</span>
+    <span>L: ${weather.minTempF}°</span>
   </div>
   `;
 };
@@ -35,7 +35,7 @@ const showForecast = (weather) => {
     forecastDiv.classList.add('forecast-day');
     forecastContainer.appendChild(forecastDiv);
     forecastDiv.innerHTML = `
-      <span>${weather.forecast.forecastday[i].date}</span>
+      <span>${weather.forecast.forecastday[i].day.date}</span>
       <span>${weather.forecast.forecastday[i].day.avgtemp_f}</span>
       <span>${weather.forecast.forecastday[i].day.condition.text}</span>
       <span>${weather.forecast.forecastday[i].day.maxtemp_f}</span>

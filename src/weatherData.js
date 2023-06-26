@@ -29,6 +29,12 @@ const getWeather = async () => {
       precip: weatherData.current.precip_in,
       sunrise: weatherData.forecast.forecastday[0].astro.sunrise,
       sunset: weatherData.forecast.forecastday[0].astro.sunset,
+      maxTempC: weatherData.forecast.forecastday[0].day.maxtemp_c,
+      maxTempF: weatherData.forecast.forecastday[0].day.maxtemp_f,
+      minTempC: weatherData.forecast.forecastday[0].day.mintemp_c,
+      minTempF: weatherData.forecast.forecastday[0].day.mintemp_f,
+      location: weatherData.location,
+      current: weatherData.current,
       forecast: weatherData.forecast,
     };
     return weather;
