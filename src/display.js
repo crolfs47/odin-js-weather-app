@@ -5,8 +5,8 @@ const forecastContainer = document.getElementById('forecast-container');
 const showCurrentWeatherMain = (weather) => {
   currentWeatherMain.innerHTML = `
   <h2 id="city">${weather.city}</h2>
-  <div id="temp">${weather.tempF}°</div>
   <img src="https:${weather.icon}">
+  <div id="temp">${weather.tempF}°</div>
   <div id="condition">${weather.condition}</div>
   <div id="high-low">
     <span>H: ${weather.maxTempF}°</span>

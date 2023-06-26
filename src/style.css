@@ -1,5 +1,9 @@
 body {
   margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
 }
 
 header {
@@ -12,4 +16,12 @@ header {
 h1 {
   margin: 0px;
   padding-bottom: 12px;
+}
+
+#weather-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid black;
+  margin: 48px;
 }
