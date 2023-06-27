@@ -114,7 +114,7 @@ button {
   flex-direction: column;
   text-align: center;
   margin: 36px;
-  width: 75%;
+  width: 700px;
   background-color: rgb(209, 240, 229);
 }
 
@@ -134,8 +134,9 @@ button {
 
 #details-grid {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 25% 25%;
   grid-gap: 10px;
+  justify-content: center;
 }
 
 #forecast-container {
@@ -146,8 +147,9 @@ button {
 
 #forecast-grid {
   display: grid;
-  grid-template-columns: 19% 19% 19% 19% 19%;
-  grid-gap: 10px;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-gap: 6px;
+  padding: 6px;
 }
 
 .flex {
