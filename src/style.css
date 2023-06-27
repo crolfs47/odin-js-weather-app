@@ -64,6 +64,11 @@ h4 {
   padding-bottom: 6px;
 }
 
+img {
+  height: 64px;
+  width: 64px;
+}
+
 form {
   display: flex;
   justify-content: center;
@@ -109,7 +114,7 @@ button {
   flex-direction: column;
   text-align: center;
   margin: 36px;
-  width: 60%;
+  width: 75%;
   background-color: rgb(209, 240, 229);
 }
 
@@ -139,6 +144,35 @@ button {
   padding: 12px;
 }
 
+#forecast-grid {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-gap: 10px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .condition {
   padding-bottom: 3px;
+}
+
+.forecast-text {
+  font-size: 12px;
+}
+
+.high-temp {
+  padding-right: 6px;
+}
+
+.bold-text {
+  font-family: 'Okine-Bold';
 }
