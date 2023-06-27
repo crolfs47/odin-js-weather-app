@@ -1,8 +1,29 @@
-const currentWeatherMain = document.getElementById('current-weather-main');
-const currentWeatherDetail = document.getElementById('current-weather-detail');
-const forecastContainer = document.getElementById('forecast-container');
+const resultsContainer = document.getElementById('results-container');
 
-const showCurrentWeatherMain = (weather) => {
+// const currentWeatherMain = document.getElementById('current-weather-main');
+// const currentWeatherDetail = document.getElementById('current-weather-detail');
+// const forecastContainer = document.getElementById('forecast-container');
+
+const setupDisplay = () => {
+  const weatherContainer = document.createElement('div');
+  weatherContainer.setAttribute('id', 'weather-container');
+  resultsContainer.appendChild(weatherContainer);
+
+  const currentWeatherMain = document.createElement('div');
+  currentWeatherMain.setAttribute('id', 'current-weather-main');
+  weatherContainer.appendChild(currentWeatherMain);
+
+  const currentWeatherDetail = document.createElement('div');
+  currentWeatherDetail.setAttribute('id', 'current-weather-detail');
+  weatherContainer.appendChild(currentWeatherDetail);
+
+  const forecastContainer = document.createElement('div');
+  forecastContainer.setAttribute('id', 'forecast-container');
+  weatherContainer.appendChild(forecastContainer);
+};
+
+const displayCurrentWeatherMain = (weather) => {
+  const currentWeatherMain = document.getElementById('current-weather-main');
   currentWeatherMain.innerHTML = `
   <h2 id="city">${weather.city}</h2>
   <img src="https:${weather.icon}">
@@ -15,7 +36,8 @@ const showCurrentWeatherMain = (weather) => {
   `;
 };
 
-const showCurrentWeatherDetail = (weather) => {
+const displayCurrentWeatherDetail = (weather) => {
+  const currentWeatherDetail = document.getElementById('current-weather-detail');
   currentWeatherDetail.innerHTML = `
     <h4>Today's Details</h4>
     <div>
@@ -29,7 +51,8 @@ const showCurrentWeatherDetail = (weather) => {
   `;
 };
 
-const showForecast = (weather) => {
+const displayForecast = (weather) => {
+  const forecastContainer = document.getElementById('forecast-container');
   forecastContainer.innerHTML = '<h4>Forecast</h4>';
   for (let i = 1; i < 6; i += 1) {
     const forecastDiv = document.createElement('div');
@@ -45,4 +68,4 @@ const showForecast = (weather) => {
   }
 };
 
-export { showCurrentWeatherMain, showCurrentWeatherDetail, showForecast };
+export { setupDisplay, displayCurrentWeatherMain, displayCurrentWeatherDetail, displayForecast };
