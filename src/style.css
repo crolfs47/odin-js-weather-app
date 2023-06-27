@@ -1,9 +1,32 @@
+@font-face {
+  font-family: 'Okine-Thin';
+  src: url('./fonts/OkineSans-Thin.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Okine-Bold';
+  src: url('./fonts/OkineSans-Regular.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Okine-Outline';
+  src: url('./fonts/OkineSans-MediumOutline.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
 body {
+  font-family: 'Okine-Thin';
   margin: 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  background-color: rgb(209, 240, 229);
 }
 
 header {
@@ -14,14 +37,32 @@ header {
 }
 
 h1 {
+  font-family: 'Okine-Outline';
   margin: 0px;
   padding-bottom: 12px;
+}
+
+h2 {
+  font-family: 'Okine-Bold';
+  margin: 0px;
+}
+
+h4 {
+  font-family: 'Okine-Bold';
+}
+
+#results-container {
+  display: flex;
+  justify-content: center;
 }
 
 #weather-container {
   display: flex;
   flex-direction: column;
   text-align: center;
-  border: 1px solid black;
+  border-radius: 24px;
   margin: 48px;
+  padding: 24px;
+  width: 60%;
+  background-color: rgb(241, 255, 250);
 }

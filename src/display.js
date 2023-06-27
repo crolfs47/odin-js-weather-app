@@ -1,10 +1,8 @@
 const resultsContainer = document.getElementById('results-container');
 
-// const currentWeatherMain = document.getElementById('current-weather-main');
-// const currentWeatherDetail = document.getElementById('current-weather-detail');
-// const forecastContainer = document.getElementById('forecast-container');
-
 const setupDisplay = () => {
+  resultsContainer.innerHTML = '';
+
   const weatherContainer = document.createElement('div');
   weatherContainer.setAttribute('id', 'weather-container');
   resultsContainer.appendChild(weatherContainer);
@@ -68,4 +66,6 @@ const displayForecast = (weather) => {
   }
 };
 
-export { setupDisplay, displayCurrentWeatherMain, displayCurrentWeatherDetail, displayForecast };
+export {
+  setupDisplay, displayCurrentWeatherMain, displayCurrentWeatherDetail, displayForecast,
+};
