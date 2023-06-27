@@ -64,7 +64,7 @@ const displayForecast = (weather) => {
     forecastDiv.innerHTML = `
       <span class="bold-text">${format(new Date(weather.forecast.forecastday[i].date), 'iii')}</span>
       <span class="forecast-text">${format(new Date(weather.forecast.forecastday[i].date), 'MMM d')}</span>
-      <img src="https:${weather.icon}">
+      <img src="https:${weather.forecast.forecastday[i].day.condition.icon}">
       <h3>${weather.forecast.forecastday[i].day.avgtemp_f}°</h3>
       <div class="flex-column">
         <span class="condition forecast-text">${weather.forecast.forecastday[i].day.condition.text}</span>
