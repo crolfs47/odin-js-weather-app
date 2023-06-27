@@ -1,3 +1,5 @@
+import { displayError } from './display';
+
 const getCityInput = () => {
   const cityInput = document.getElementById('city-input').value;
   return cityInput;
@@ -10,7 +12,8 @@ const getCurrentWeatherAPIData = async () => {
     const weatherData = await response.json();
     return weatherData;
   } catch (error) {
-    console.log(`error: ${error}`);
+    displayError();
+    return error;
   }
 };
 
@@ -40,7 +43,8 @@ const getWeather = async () => {
     };
     return weather;
   } catch (error) {
-    console.log(`error: ${error}`);
+    displayError();
+    return error;
   }
 };
 

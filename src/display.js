@@ -22,6 +22,15 @@ const setupDisplay = () => {
   weatherContainer.appendChild(forecastContainer);
 };
 
+const displayError = () => {
+  resultsContainer.innerHTML = '';
+
+  const errorContainer = document.createElement('div');
+  errorContainer.setAttribute('id', 'error-container');
+  resultsContainer.appendChild(errorContainer);
+  errorContainer.innerHTML = '<div>Please enter a valid city name. </div>';
+};
+
 const displayCurrentWeatherMain = (weather) => {
   const currentWeatherMain = document.getElementById('current-weather-main');
   currentWeatherMain.innerHTML = `
@@ -78,5 +87,9 @@ const displayForecast = (weather) => {
 };
 
 export {
-  setupDisplay, displayCurrentWeatherMain, displayCurrentWeatherDetail, displayForecast,
+  setupDisplay,
+  displayCurrentWeatherMain,
+  displayCurrentWeatherDetail,
+  displayForecast,
+  displayError,
 };
