@@ -59,9 +59,9 @@ h3 {
 
 h4 {
   font-family: 'Okine-Bold';
-  font-size: 16px;
+  font-size: 18px;
   margin: 0px;
-  padding-bottom: 6px;
+  padding-bottom: 12px;
 }
 
 img {
@@ -146,13 +146,18 @@ button {
 
 #forecast-grid {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 19% 19% 19% 19% 19%;
   grid-gap: 10px;
 }
 
 .flex {
   display: flex;
   justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .forecast-day {

@@ -66,11 +66,13 @@ const displayForecast = (weather) => {
       <span class="forecast-text">${format(new Date(weather.forecast.forecastday[i].date), 'MMM d')}</span>
       <img src="https:${weather.icon}">
       <h3>${weather.forecast.forecastday[i].day.avgtemp_f}°</h3>
-      <span class="condition forecast-text">${weather.forecast.forecastday[i].day.condition.text}</span>
-      <div class="flex">
-        <span class="forecast-text high-temp">H: ${weather.forecast.forecastday[i].day.maxtemp_f}°</span>
-        <span class="forecast-text">L: ${weather.forecast.forecastday[i].day.mintemp_f}°</span>
-      </div
+      <div class="flex-column">
+        <span class="condition forecast-text">${weather.forecast.forecastday[i].day.condition.text}</span>
+        <div class="flex">
+          <span class="forecast-text high-temp">H: ${weather.forecast.forecastday[i].day.maxtemp_f}°</span>
+          <span class="forecast-text">L: ${weather.forecast.forecastday[i].day.mintemp_f}°</span>
+        </div>
+      </div>
     `;
   }
 };
