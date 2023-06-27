@@ -51,7 +51,7 @@ const displayCurrentWeatherDetail = (weather) => {
 
 const displayForecast = (weather) => {
   const forecastContainer = document.getElementById('forecast-container');
-  forecastContainer.innerHTML = '<h4>Forecast</h4>';
+  forecastContainer.innerHTML = '<h4>5-Day Forecast</h4>';
 
   const forecastGrid = document.createElement('div');
   forecastGrid.setAttribute('id', 'forecast-grid');
@@ -64,7 +64,7 @@ const displayForecast = (weather) => {
     forecastDiv.innerHTML = `
       <span class="bold-text">${format(new Date(weather.forecast.forecastday[i].date), 'iii')}</span>
       <span class="forecast-text">${format(new Date(weather.forecast.forecastday[i].date), 'MMM d')}</span>
-      <img src="https:${weather.forecast.forecastday[i].day.condition.icon}">
+      <img class="forecast-icon"src="https:${weather.forecast.forecastday[i].day.condition.icon}">
       <h3>${weather.forecast.forecastday[i].day.avgtemp_f}°</h3>
       <div class="flex-column">
         <span class="condition forecast-text">${weather.forecast.forecastday[i].day.condition.text}</span>

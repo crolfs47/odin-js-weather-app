@@ -42,6 +42,7 @@ h1 {
   color:rgb(209, 240, 229);
   margin: 0px;
   font-size: 48px;
+  padding-bottom: 6px;
 }
 
 h2 {
@@ -52,7 +53,7 @@ h2 {
 
 h3 {
   font-family: 'Okine-Bold';
-  font-size: 20px;
+  font-size: 22px;
   margin: 0px;
   padding-bottom: 6px;
 }
@@ -62,11 +63,6 @@ h4 {
   font-size: 18px;
   margin: 0px;
   padding-bottom: 12px;
-}
-
-img {
-  height: 64px;
-  width: 64px;
 }
 
 form {
@@ -150,6 +146,7 @@ button {
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-gap: 6px;
   padding: 6px;
+  justify-content: center;
 }
 
 .flex {
@@ -160,6 +157,11 @@ button {
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.forecast-icon {
+  height: 48px;
+  width: 48px;
 }
 
 .forecast-day {
