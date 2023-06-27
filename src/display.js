@@ -25,8 +25,8 @@ const displayCurrentWeatherMain = (weather) => {
   currentWeatherMain.innerHTML = `
   <h2 id="city">${weather.city}</h2>
   <img src="https:${weather.icon}">
-  <div id="temp">${weather.tempF}°</div>
-  <div id="condition">${weather.condition}</div>
+  <h3 id="temp">${weather.tempF}°</h3>
+  <div class="condition" id="condition">${weather.condition}</div>
   <div id="high-low">
     <span>H: ${weather.maxTempF}°</span>
     <span>L: ${weather.minTempF}°</span>
@@ -38,12 +38,12 @@ const displayCurrentWeatherDetail = (weather) => {
   const currentWeatherDetail = document.getElementById('current-weather-detail');
   currentWeatherDetail.innerHTML = `
     <h4>Today's Details</h4>
-    <div>
-      <span>Feels like: ${weather.feelslikeF}</span><br>
-      <span>Precipitation: ${weather.precip}"</span><br>
-      <span>Humidity: ${weather.humidity}%</span><br>
-      <span>Wind: ${weather.wind}mph</span><br>
-      <span>Sunrise: ${weather.sunrise}</span><br>
+    <div id="details-grid">
+      <span>Feels like: ${weather.feelslikeF}°</span>
+      <span>Precipitation: ${weather.precip}"</span>
+      <span>Humidity: ${weather.humidity}%</span>
+      <span>Wind: ${weather.wind} mph</span>
+      <span>Sunrise: ${weather.sunrise}</span>
       <span>Sunset: ${weather.sunset}</span>
     </div>
   `;
@@ -57,11 +57,11 @@ const displayForecast = (weather) => {
     forecastDiv.classList.add('forecast-day');
     forecastContainer.appendChild(forecastDiv);
     forecastDiv.innerHTML = `
-      <span>${weather.forecast.forecastday[i].day.date}</span>
-      <span>${weather.forecast.forecastday[i].day.avgtemp_f}</span>
+      <span>${weather.forecast.forecastday[i].date}</span>
+      <span>${weather.forecast.forecastday[i].day.avgtemp_f}°</span>
       <span>${weather.forecast.forecastday[i].day.condition.text}</span>
-      <span>${weather.forecast.forecastday[i].day.maxtemp_f}</span>
-      <span>${weather.forecast.forecastday[i].day.mintemp_f}</span>
+      <span>H: ${weather.forecast.forecastday[i].day.maxtemp_f}°</span>
+      <span>L: ${weather.forecast.forecastday[i].day.mintemp_f}°</span>
     `;
   }
 };
